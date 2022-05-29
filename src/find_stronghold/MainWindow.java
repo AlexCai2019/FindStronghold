@@ -21,7 +21,7 @@ public class MainWindow
         initialTextFields();
 
         frame = new Frame("終界祭壇尋找器");
-        frame.setSize(500, 340);
+        frame.setSize(480, 340);
         frame.addWindowListener(new WindowAdapter()
         {
             @Override
@@ -33,8 +33,9 @@ public class MainWindow
 
         frame.setIconImage(Toolkit.getDefaultToolkit().getImage(MainWindow.class.getResource("icon.png")));
         frame.setLayout(new BorderLayout());
-        Label empty = new Label(" ");
-        frame.add(empty, BorderLayout.WEST);
+        frame.add(new Label(""), BorderLayout.WEST);
+        frame.add(new Label(""), BorderLayout.SOUTH);
+        frame.add(new Label(""), BorderLayout.NORTH);
         Panel centerPanel = new Panel(new GridLayout(5, 1));
         frame.add(centerPanel, BorderLayout.CENTER);
 
