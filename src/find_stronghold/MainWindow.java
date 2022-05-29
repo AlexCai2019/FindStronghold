@@ -11,8 +11,8 @@ public class MainWindow
     private final TextField[] secondThrowTextFields = new TextField[2]; //第二組丟出的座標
     private final TextField[] secondLandTextFields = new TextField[2]; //第二組落地的座標
     private final TextField[][] allTextFields = { firstThrowTextFields,firstLandTextFields,secondThrowTextFields,secondLandTextFields };
-    private final Font font = new Font("Serif", Font.PLAIN, 24); //字型
-    private final MyLabel resultLabel = new MyLabel("可能位置: ", new Font("Serif", Font.PLAIN, 36));
+    private final Font font = new Font("Serif", Font.PLAIN, 18); //字型
+    private final MyLabel resultLabel = new MyLabel("可能位置: ", new Font("Serif", Font.PLAIN, 24));
     private final String[][] coordinates = new String[4][2];
     private final Calculate calculate = new Calculate();
 
@@ -21,7 +21,7 @@ public class MainWindow
         initialTextFields();
 
         frame = new Frame("終界祭壇尋找器");
-        frame.setSize(740, 480);
+        frame.setSize(500, 340);
         frame.addWindowListener(new WindowAdapter()
         {
             @Override
@@ -33,9 +33,9 @@ public class MainWindow
 
         frame.setIconImage(Toolkit.getDefaultToolkit().getImage(MainWindow.class.getResource("icon.png")));
         frame.setLayout(new BorderLayout());
-        frame.add(new Label(""), BorderLayout.NORTH);
-        frame.add(new Label(""), BorderLayout.WEST);
-        Panel centerPanel = new Panel(new GridLayout(6, 1));
+        Label empty = new Label(" ");
+        frame.add(empty, BorderLayout.WEST);
+        Panel centerPanel = new Panel(new GridLayout(5, 1));
         frame.add(centerPanel, BorderLayout.CENTER);
 
         FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT, 15, 1);
