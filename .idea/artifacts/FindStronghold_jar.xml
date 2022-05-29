@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FindStronghold:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FindStronghold</output-path>
+    <root id="archive" name="FindStronghold.jar">
+      <element id="module-output" name="FindStronghold" />
+    </root>
+  </artifact>
+</component>
